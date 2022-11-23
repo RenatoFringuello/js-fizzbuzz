@@ -32,7 +32,9 @@ for (let i = 1; i <= 100; i++) {
         console.log("FizzBuzz");
         container.innerHTML += `
             <div class="fizzbuzz">
-                FizzBuzz
+                <span>
+                    FizzBuzz
+                </span>
             </div>
         `;
     }
@@ -40,7 +42,9 @@ for (let i = 1; i <= 100; i++) {
         console.log("Fizz");
         container.innerHTML += `
             <div class="fizz">
-                Fizz
+                <span>
+                    Fizz
+                </span>
             </div>
         `;
     }
@@ -48,7 +52,9 @@ for (let i = 1; i <= 100; i++) {
         console.log("Buzz");
         container.innerHTML += `
             <div class="buzz">
-                Buzz
+                <span>
+                    Buzz
+                </span>
                 <img class="hand hand-tl" src="./img/hand.png" alt=""> 
                 <img class="hand hand-tr" src="./img/hand.png" alt=""> 
                 <img class="hand hand-bl" src="./img/hand.png" alt=""> 
