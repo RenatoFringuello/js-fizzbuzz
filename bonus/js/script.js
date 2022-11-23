@@ -1,4 +1,37 @@
 const container = document.getElementById('container');
+const fizzBuzzHtml = `
+<div class="fizzbuzz">
+    <span>
+        FizzBuzz
+    </span>
+</div>
+`;
+const fizzHtml = `
+<div class="fizz">
+    <span>
+        Fizz
+    </span>
+</div>
+`;
+const buzzHtml = `
+<div class="buzz">
+    <span>
+        Buzz
+    </span>
+    <img class="hand hand-tl" src="./img/hand.png" alt=""> 
+    <img class="hand hand-tr" src="./img/hand.png" alt=""> 
+    <img class="hand hand-bl" src="./img/hand.png" alt=""> 
+    <img class="hand hand-br" src="./img/hand.png" alt=""> 
+</div>
+`;
+const numberHtml = `
+<div>
+    ${i}
+</div>
+`;
+const fizzbuzz = 'FizzBuzz';
+const fizz = 'Fizz';
+const buzz = 'Buzz';
 
 for (let i = 1; i <= 100; i++) {
     
@@ -28,46 +61,25 @@ for (let i = 1; i <= 100; i++) {
      * In caso contrario chiediamo se fosse divisibile per 5
      */
 
+    // queste variabili mi servono solo dentro il for le inizzializzo qui
+    let injection, result;
+
     if(i % 3 === 0 && i % 5 === 0){
-        console.log("FizzBuzz");
-        container.innerHTML += `
-            <div class="fizzbuzz">
-                <span>
-                    FizzBuzz
-                </span>
-            </div>
-        `;
+        result = fizzbuzz;
+        injection = fizzBuzzHtml;
     }
     else if(i % 3 === 0){
-        console.log("Fizz");
-        container.innerHTML += `
-            <div class="fizz">
-                <span>
-                    Fizz
-                </span>
-            </div>
-        `;
+        result = fizz;
+        injection = fizzHtml;
     }
     else if(i % 5 === 0){
-        console.log("Buzz");
-        container.innerHTML += `
-            <div class="buzz">
-                <span>
-                    Buzz
-                </span>
-                <img class="hand hand-tl" src="./img/hand.png" alt=""> 
-                <img class="hand hand-tr" src="./img/hand.png" alt=""> 
-                <img class="hand hand-bl" src="./img/hand.png" alt=""> 
-                <img class="hand hand-br" src="./img/hand.png" alt=""> 
-            </div>
-        `;
+        result = buzz;
+        injection = buzzHtml;
     }
     else{
-        console.log(i);
-        container.innerHTML += `
-            <div>
-                ${i}
-            </div>
-        `;
+        result = i;
+        injection = numberHtml;
     }
+    console.log(result);
+    container.innerHTML += injection;
 }
