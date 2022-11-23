@@ -1,7 +1,11 @@
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i + 1 <= 100; i++) {
     
     // console.log(i);
     /**
+     * ! modifica:
+     * ! prima di tutto chiedo se i === 0, oppure faccio partire i da 1, 
+     * ! oppure chiedo nella condizione iterativa i +1 < 100
+     *
      * chiedo se i fosse divisibile per 3 AND i fosse divisibile per 5
      * VERO
      *      fizzbuzz
