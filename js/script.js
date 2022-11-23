@@ -1,3 +1,8 @@
+const container = document.getElementById('container');
+const fizzbuzz = 'FizzBuzz';
+const fizz = 'Fizz';
+const buzz = 'Buzz';
+
 for (let i = 1; i <= 100; i++) {
     
     // console.log(i);
@@ -26,16 +31,20 @@ for (let i = 1; i <= 100; i++) {
      * In caso contrario chiediamo se fosse divisibile per 5
      */
 
+    // questa variabile mi serve solo dentro il for la inizzializzo qui
+    let result;
+
     if(i % 3 === 0 && i % 5 === 0){
-        console.log("FizzBuzz");
+        result = fizzbuzz;
     }
     else if(i % 3 === 0){
-        console.log("Fizz");
+        result = fizz;
     }
     else if(i % 5 === 0){
-        console.log("Buzz");
+        result = buzz;
     }
     else{
-        console.log(i);
+        result = i;
     }
+    console.log(result);
 }
