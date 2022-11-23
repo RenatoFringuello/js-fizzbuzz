@@ -24,11 +24,6 @@ const buzzHtml = `
     <img class="hand hand-br" src="./img/hand.png" alt=""> 
 </div>
 `;
-const numberHtml = `
-<div>
-    ${i}
-</div>
-`;
 const fizzbuzz = 'FizzBuzz';
 const fizz = 'Fizz';
 const buzz = 'Buzz';
@@ -78,7 +73,11 @@ for (let i = 1; i <= 100; i++) {
     }
     else{
         result = i;
-        injection = numberHtml;
+        injection = `
+            <div>
+                ${i}
+            </div>
+        `;
     }
     console.log(result);
     container.innerHTML += injection;
