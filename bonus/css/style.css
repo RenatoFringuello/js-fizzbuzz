@@ -1,0 +1,23 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+}
+#container > *{
+    width: calc(100% / 10 - 4rem);
+    min-width: fit-content;
+    height: 40px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: aquamarine;
+    display: grid;
+    place-content: center;
+}
+#container > .fizz{
+    background-color: #fffd7f;
+}
+#container > .buzz{
+    background-color: #7f94ff;
+}
+#container > .fizzbuzz{
+    background-color: #ff7f7f;
+}
