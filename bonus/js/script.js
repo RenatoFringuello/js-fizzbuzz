@@ -49,6 +49,10 @@ for (let i = 1; i <= 100; i++) {
         container.innerHTML += `
             <div class="buzz">
                 Buzz
+                <img class="hand hand-tl" src="./img/hand.png" alt=""> 
+                <img class="hand hand-tr" src="./img/hand.png" alt=""> 
+                <img class="hand hand-bl" src="./img/hand.png" alt=""> 
+                <img class="hand hand-br" src="./img/hand.png" alt=""> 
             </div>
         `;
     }
